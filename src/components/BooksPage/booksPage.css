@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap");
+.booksPageContainer {
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oneBookContainer {
+    margin: 10px 25px;
+      background-color: white;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid lightgray;
+  max-width: 1300px;
+}
+
+.oneBookInformation {
+  padding: 33px 20px 22px 20px;
+}
+
+.oneBookInformationText {
+  line-height: 0px;
+}
+
+.oneBookInformationOptions {
+    max-width: 217.25px;
+}
+
+.oneBookInformationOptions ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-right: 10px;
+  margin: 28px 0px 0px 0px;
+}
+
+.oneBookInformationOptions ul li {
+    font-family: 'Roboto Slab', serif;
+
+  border-right: 1px solid black;
+  padding: 0px 15px;
+  border-right: 1px solid lightgray;
+  padding: 0px 15px;
+  font-size: 13px;
+  color: #4386bf;
+  cursor: pointer;
+}
+
+.oneBookInformationOptions ul li:first-child {
+  padding: 0px 15px 0px 0px;
+}
+.oneBookInformationOptions ul li:last-child {
+  border-right: none;
+}
+
+.bookActionSpan {
+  font-size: 13px;
+  color: gray;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bookTitleH2 {
+  margin: 25px 0px 22px 0px;
+  font-size: 20px;
+  /* max-width: 250px; */
+  font-family: "Roboto Slab", serif;
+}
+
+.bookAuthorSpan {
+  color: #4386bf;
+  font-size: 13px;
+  font-family: "Roboto Slab", serif;
+}
+
+.oneBookRightContainer {
+  display: flex;
+  width: 450px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.oneBookPercent {
+
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin: 20px 1px;
+
+  
+}
+
+.oneBookPercentInnerAlign {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.percentText {
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  color: #121212;
+}
+
+.completedText {
+  color: gray;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.5;
+}
+
+.ant-progress-inner {
+  width: 68px !important;
+  height: 68px !important;
+}
+
+.currentChapter {
+    color: #121212;
+    opacity: 0.5;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+}
+
+.oneBookCurrentChapter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    align-content: center;
+    margin: 25px 1px;
+}
+
+.numberChapter {
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: -0.4px;
+    margin: 10px 1px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #121212;
+}
+
+.updateButton {
+  border-radius: 3px;
+  background-color: #0290ff;
+  padding: 7px 19px 8px 22px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.updateButton:hover span {
+    opacity: 1;
+}
+
+.updateButton span {
+  font-family: "Roboto Slab", serif;
+  font-size: 13px;
+  opacity: 0.7;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+
+@media only screen and (min-width: 550px) {
+    .oneBookRightContainer {
+      
+        flex-wrap: unset;
+        
+    }
+}
+
+@media only screen and (min-width: 775px) {
+    .oneBookContainer {
+        justify-content: space-between;
+    }
+    
+    
+   
+    .oneBookPercentInnerAlign{
+        border-right: 1px solid lightgray;
+        padding-right: 47px;
+    }
+    
+    
+    
+    
+    
+    .oneBookCurrentChapter {
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+    
+    .currentChapter {
+    
+      margin: 1px 58px 0 59px;
+    }
+    
+    .numberChapter {
+      margin: 7px 109px 4px 59px;
+    }
+    
+    .updateButton {
+      margin: 15px 0 9px 59px;
+    }
+}
