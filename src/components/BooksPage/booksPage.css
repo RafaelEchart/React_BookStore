@@ -73,6 +73,8 @@
   margin: 25px 0 22px 0;
   font-size: 20px;
   font-family: "Roboto Slab", serif;
+  width: 218px;
+  line-height: 20px;
 }
 
 .bookAuthorSpan {
