@@ -1,0 +1,23 @@
+.noBooksContainer {
+  margin: 10px 25px;
+  background-color: white;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid lightgray;
+  max-width: 1300px;
+}
+
+.noBooksInformation {
+  padding: 33px 20px 22px 20px;
+}
+
+.noBookTitleH2 {
+  margin: 25px 0 22px 0;
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+  width: 218px;
+  line-height: 20px;
+}

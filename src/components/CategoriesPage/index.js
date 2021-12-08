@@ -3,10 +3,10 @@ import './categoriesPage.css';
 
 const CategoriesPage = () => (
 
-      <div className="categoriesPageContainer">
+  <div className="categoriesPageContainer">
 
-      Under construction
-      </div>
+    Under construction
+  </div>
 
 );
 
