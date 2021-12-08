@@ -6,15 +6,11 @@ html {
 
 body {
   margin: 0;
-
-  /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
   background-color: #f7f7f9;
 }
 
 a {
   color: #344563;
-
-  /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
   font-weight: 400;
 }
 
@@ -24,8 +20,6 @@ a {
 
 .topnav {
   width: fit-content;
-
-  /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
 }
 
 .topnav a {
@@ -86,15 +80,11 @@ a {
   font-style: normal;
 }
 
-/* menu */
-
 .header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-
-/* menu icon */
 
 .header .menu-icon {
   cursor: pointer;
@@ -203,8 +193,6 @@ a {
   color: #fff;
 }
 
-/**   */
-
 .projectDetailsModal {
   position: fixed;
   left: 0;
@@ -215,8 +203,6 @@ a {
   display: none;
   overflow-y: auto;
   transition: opacity 0.5s;
-
-  /* opacity: 0 */
 }
 
 @keyframes open-modal {
@@ -249,8 +235,6 @@ a {
   flex-direction: column;
   align-content: flex-end;
   align-items: flex-end;
-
-  /* max-width: 1200px; */
 }
 
 .title-modal-align {
@@ -333,8 +317,6 @@ a {
   width: 100%;
   background-color: lightgray;
   height: 100vh;
-
-  /* opacity: 0.9; */
   display: block;
   mix-blend-mode: multiply;
 }
