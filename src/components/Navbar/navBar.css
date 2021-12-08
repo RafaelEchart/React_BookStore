@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f7f9;
+}
+
+a {
+  color: #344563;
+  font-weight: 400;
+}
+
+.desktopMenu-up {
+  display: none;
+}
+
+.topnav {
+  width: fit-content;
+}
+
+.topnav a {
+  text-decoration: none;
+  font-size: 15px;
+  padding: 7px 16px;
+}
+
+.hover_header {
+  font-family: "Poppins light", Arial, Helvetica, sans-serif;
+}
+
+.hover_header:hover {
+  color: #0290ff;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 3;
+  margin-bottom: 20px;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 25px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0290ff;
+  font-style: normal;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #5390ff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+  background: #5390ff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon::before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon::after {
+  top: -5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navBar_icon {
+    display: block !important;
+  }
+
+  .innerDiv_navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .desktopMenu-up {
+    display: block;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: unset;
+  }
+
+  .max-width-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1350px;
+    margin: auto;
+  }
+}
+
+.mobileMenuCover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #6070ff;
+  height: 100vh;
+  opacity: 1;
+  display: none;
+  mix-blend-mode: multiply;
+}
+
+.firstContainer {
+  height: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 24px;
+  font-size: 24px;
+  color: antiquewhite;
+}
+
+.mobileMenuItems {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.mobileMenuItems-a {
+  text-decoration: none;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.projectDetailsModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(193, 199, 208, 0.8);
+  height: 100vh;
+  display: none;
+  overflow-y: auto;
+  transition: opacity 0.5s;
+}
+
+@keyframes open-modal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes close-modal {
+  100% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 1;
+  }
+}
+
+.innerDiv {
+  background-color: white;
+  margin: 60px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.title-modal-align {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3a4a42;
+  letter-spacing: 1px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.project-description {
+  color: #344563;
+  line-height: 24px;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-button img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.projectDetailsModal .projectDetailsModalTechGroup {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.techModal {
+  background: #ebf0ee;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a4a42;
+  line-height: 16px;
+  margin: 0 6px;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  background-color: transparent;
+  border: 0;
+  color: white;
+}
+
+.modal-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  min-height: 300px;
+  margin-bottom: 5px;
+  align-items: flex-start;
+}
+
+.modal-img {
+  width: 100%;
+  max-width: 554px;
+  margin: auto;
+  border-radius: 11px;
+}
+
+.modalCover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: lightgray;
+  height: 100vh;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.mobileNavBackground {
+  background-color: #fff;
+  height: 56.5px;
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.innerDiv_navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar_icon {
+  display: none;
+  margin-right: 25px;
+  font-size: 25px;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.selectedOption_NavBar {
+  color: black;
+  font-weight: 600;
+}
+
+.noSelectedOption_NavBar {
+  color: gray;
+  font-weight: 400;
+}
