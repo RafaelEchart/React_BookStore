@@ -36,9 +36,9 @@
   opacity: 1;
 }
 
-.ant-select.newBookSelectGenre {
-  margin-bottom: 15px;
-  width: 100%;
+.ant-select {
+  margin-bottom: 15px !important;
+  width: 100% !important;
 }
 
 input.newBookName {
@@ -46,7 +46,12 @@ input.newBookName {
   width: 100%;
 }
 
-@media only screen and (min-width: 550px) {
+input.newBookAuthor {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 615px) {
   .ant-select.newBookSelectGenre {
     margin-bottom: 0;
     width: 25%;
@@ -54,7 +59,17 @@ input.newBookName {
 
   input.newBookName {
     margin-bottom: 0;
-    width: 60%;
+    width: 26%;
+  }
+
+  input.newBookAuthor {
+    margin-bottom: 0;
+    width: 26%;
+  }
+
+  .ant-select {
+    margin-bottom: 0 !important;
+    width: 26% !important;
   }
 
   .newBookInnerContainer {
