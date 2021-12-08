@@ -57,6 +57,7 @@ const OneBook = (props) => {
   );
 };
 OneBook.propTypes = {
-  oneBook: PropTypes.element.isRequired,
+  oneBook: PropTypes.objectOf(PropTypes.any).isRequired,
 };
+
 export default OneBook;
