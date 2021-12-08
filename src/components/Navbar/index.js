@@ -79,20 +79,16 @@ const Navbar = () => {
         <div className="mobileMenu">
           <ul>
             <li className="mobileMenuItems">
-              <a href="#portfolio" className="mobileMenuItems-a">
-                Portfolio
-              </a>
+              <Link to="/" className="mobileMenuItems-a">
+                Books
+              </Link>
             </li>
             <li className="mobileMenuItems">
-              <a href="#about" className="mobileMenuItems-a">
-                About
-              </a>
+              <Link to="/categories" className="mobileMenuItems-a">
+                Categories
+              </Link>
             </li>
-            <li className="mobileMenuItems">
-              <a href="#contact" className="mobileMenuItems-a">
-                Contact
-              </a>
-            </li>
+
           </ul>
         </div>
       </div>

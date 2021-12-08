@@ -9,7 +9,7 @@ import './newBook.css';
 
 const NewBook = () => {
   const dispatch = useDispatch();
-  const [newBook, setNeBook] = useState({ title: '', author: '', genre: '' });
+  const [newBook, setNeBook] = useState({ title: '', author: '', genre: 'Genre' });
   const { Option } = Select;
 
   const newBookNameHandler = (e) => {
