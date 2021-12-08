@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap");
+
 .booksPageContainer {
   height: 100vh;
   width: 100%;
   min-height: 100vh;
   background-color: #f5f6fa;
   color: black;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .oneBookContainer {
-    margin: 10px 25px;
-      background-color: white;
+  margin: 10px 25px;
+  background-color: white;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,7 @@
 }
 
 .oneBookInformationOptions {
-    max-width: 217.25px;
+  max-width: 217.25px;
 }
 
 .oneBookInformationOptions ul {
@@ -42,24 +42,22 @@
   justify-content: space-between;
   padding: 0;
   border-right: 10px;
-  margin: 28px 0px 0px 0px;
+  margin: 28px 0 0 0;
 }
 
 .oneBookInformationOptions ul li {
-    font-family: 'Roboto Slab', serif;
-
-  border-right: 1px solid black;
-  padding: 0px 15px;
+  font-family: 'Roboto Slab', serif;
+  padding: 0 15px;
   border-right: 1px solid lightgray;
-  padding: 0px 15px;
   font-size: 13px;
   color: #4386bf;
   cursor: pointer;
 }
 
 .oneBookInformationOptions ul li:first-child {
-  padding: 0px 15px 0px 0px;
+  padding: 0 15px 0 0;
 }
+
 .oneBookInformationOptions ul li:last-child {
   border-right: none;
 }
@@ -72,8 +70,9 @@
 }
 
 .bookTitleH2 {
-  margin: 25px 0px 22px 0px;
+  margin: 25px 0 22px 0;
   font-size: 20px;
+
   /* max-width: 250px; */
   font-family: "Roboto Slab", serif;
 }
@@ -92,13 +91,10 @@
 }
 
 .oneBookPercent {
-
-    display: flex;
-    align-items: center;
-    width: 200px;
-    margin: 20px 1px;
-
-  
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 20px 1px;
 }
 
 .oneBookPercentInnerAlign {
@@ -127,41 +123,37 @@
 }
 
 .currentChapter {
-    color: #121212;
-    opacity: 0.5;
-    font-family: 'Roboto Slab', serif;
-    font-size: 12px;
+  color: #121212;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
 }
 
 .oneBookCurrentChapter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 250px;
-    align-items: center;
-    align-content: center;
-    margin: 25px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  align-items: center;
+  align-content: center;
+  margin: 25px 1px;
 }
 
 .numberChapter {
-    font-family: 'Roboto Slab', serif;
-    letter-spacing: -0.4px;
-    margin: 10px 1px;
-    font-size: 15px;
-    font-weight: 300;
-    color: #121212;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: -0.4px;
+  margin: 10px 1px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #121212;
 }
 
 .updateButton {
   border-radius: 3px;
   background-color: #0290ff;
   padding: 7px 19px 8px 22px;
-  border: 0px;
+  border: 0;
   cursor: pointer;
-}
-
-.updateButton:hover span {
-    opacity: 1;
 }
 
 .updateButton span {
@@ -173,46 +165,40 @@
   letter-spacing: 0.5px;
 }
 
+.updateButton:hover span {
+  opacity: 1;
+}
 
 @media only screen and (min-width: 550px) {
-    .oneBookRightContainer {
-      
-        flex-wrap: unset;
-        
-    }
+  .oneBookRightContainer {
+    flex-wrap: unset;
+  }
 }
 
 @media only screen and (min-width: 775px) {
-    .oneBookContainer {
-        justify-content: space-between;
-    }
-    
-    
-   
-    .oneBookPercentInnerAlign{
-        border-right: 1px solid lightgray;
-        padding-right: 47px;
-    }
-    
-    
-    
-    
-    
-    .oneBookCurrentChapter {
-      align-items: flex-start;
-      align-content: flex-start;
-    }
-    
-    .currentChapter {
-    
-      margin: 1px 58px 0 59px;
-    }
-    
-    .numberChapter {
-      margin: 7px 109px 4px 59px;
-    }
-    
-    .updateButton {
-      margin: 15px 0 9px 59px;
-    }
+  .oneBookContainer {
+    justify-content: space-between;
+  }
+
+  .oneBookPercentInnerAlign {
+    border-right: 1px solid lightgray;
+    padding-right: 47px;
+  }
+
+  .oneBookCurrentChapter {
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .currentChapter {
+    margin: 1px 58px 0 59px;
+  }
+
+  .numberChapter {
+    margin: 7px 109px 4px 59px;
+  }
+
+  .updateButton {
+    margin: 15px 0 9px 59px;
+  }
 }

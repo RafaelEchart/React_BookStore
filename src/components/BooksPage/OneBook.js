@@ -1,12 +1,9 @@
-import { useState } from "react";
-import { Progress } from "antd";
-import './booksPage.css'
+import React from 'react';
+import { Progress } from 'antd';
+import './booksPage.css';
 
 const OneBook = (props) => {
-
-
-    const { oneBook } = props
-  
+  const { oneBook } = props;
 
   return (
       <div className ="oneBookContainer">
@@ -16,7 +13,7 @@ const OneBook = (props) => {
                 <span className="bookActionSpan">{oneBook.action}</span>
                 <h2 className="bookTitleH2">{oneBook.title}</h2>
                 <span className="bookAuthorSpan">{oneBook.author}</span>
-               
+
                 </div>
 
                 <div className="oneBookInformationOptions">
@@ -45,8 +42,8 @@ const OneBook = (props) => {
             </div>
             </div>
         </div>
-    
-  )
+
+  );
 };
 
 export default OneBook;

@@ -1,16 +1,12 @@
-import { Input, Select } from "antd";
-import './newBook.css'
+import React from 'react';
+import { Input, Select } from 'antd';
+import './newBook.css';
 
 const NewBook = () => {
+  function handleChange(value) {
+    console.log(`selected ${value}`);
+  }
 
-    const { Option } = Select;
-  
-    function handleChange(value) {
-        console.log(`selected ${value}`);
-      }
-
-
-  
   return (
       <div className="newBookContainer">
                 <div className="newBookInnerContainer">
@@ -21,7 +17,7 @@ const NewBook = () => {
 
                 </div>
       </div>
-  )
+  );
 };
 
 export default NewBook;

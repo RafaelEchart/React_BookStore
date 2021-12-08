@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CategoriesPage from './components/CategoriesPage';
 import BooksPage from './components/BooksPage/index';
-import './index.css'
-import "antd/dist/antd.css";
+import './index.css';
+import 'antd/dist/antd.css';
 import Navbar from './components/Navbar/index';
 
 ReactDOM.render(
@@ -12,9 +13,8 @@ ReactDOM.render(
     <Navbar/>
       <Switch>
         <Route exact path="/" component={BooksPage} />
-        {/* <Route path="/calculator" component={CalculatorPage} />
-        <Route path="/quote" component={QuotePage} />
-        <Route path="*" component={NotMatch} /> */}
+        <Route path="/categories" component={CategoriesPage} />
+
       </Switch>
     </Router>
   </React.StrictMode>,

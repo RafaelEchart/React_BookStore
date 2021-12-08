@@ -1,53 +1,38 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 
-import "./navBar.css";
-let menuButton
-let closeButton
-let menuCover
+import './navBar.css';
+
+let menuButton;
+let menuCover;
 
 const Navbar = () => {
+  const history = useHistory();
+  const [selectedPath, setSelectedPath] = useState('');
 
-  const history = useHistory()
-  const [selectedPath, setSelectedPath] = useState('')
-    
-  
-   useEffect(() => {
-      return history.listen((location) => { 
-        setSelectedPath(location.pathname)
-      }) 
-   },[history]) 
+  useEffect(() => history.listen((location) => {
+    setSelectedPath(location.pathname);
+  }), [history]);
 
-  
-  useEffect(()=>{
-    menuButton = document.getElementById("menuButton");
-    closeButton = document.getElementById("closeButton");
-    menuCover = document.getElementById("mobileMenuCover");
-    setSelectedPath(history.location.pathname)
-  
-
-  }, [])
+  useEffect(() => {
+    menuButton = document.getElementById('menuButton');
+    menuCover = document.getElementById('mobileMenuCover');
+    setSelectedPath(history.location.pathname);
+  }, []);
   const openMobileMenu = () => {
-    menuButton.style.display = "none";
-    menuCover.style.display = "block";
-    menuCover.style.animation= 'open-modal 0.7s ease-out';
-    
-    // main.style.filter = 'blur(8px)';
-
+    menuButton.style.display = 'none';
+    menuCover.style.display = 'block';
+    menuCover.style.animation = 'open-modal 0.7s ease-out';
   };
 
   const closeMobileMenu = () => {
-
     menuButton.style.display = 'block';
     menuCover.style.animation = 'close-modal 0.7s ease-out';
 
     setTimeout(() => {
       menuCover.style.display = 'none';
     }, 700);
-
-  // main.style.filter = 'blur(0px)';
-
   };
   return (
     <React.Fragment>
@@ -55,7 +40,6 @@ const Navbar = () => {
         <div className="max-width-header">
           <div className="innerDiv_navbar">
 
-          
           <Link to="/" className="logo">
             Bookstore CMS
           </Link>
@@ -75,13 +59,13 @@ const Navbar = () => {
           </div>
 
           <div className="topnav desktopMenu-up" id="myTopnav">
-            <Link className={`hover_header ${selectedPath === ('/'|| false) ? 'selectedOption_NavBar' : 'noSelectedOption_NavBar'}`} to="/">
+            <Link className={`hover_header ${selectedPath === ('/' || false) ? 'selectedOption_NavBar' : 'noSelectedOption_NavBar'}`} to="/">
               Books
             </Link>
             <Link className={`hover_header ${selectedPath === '/categories' ? 'selectedOption_NavBar' : 'noSelectedOption_NavBar'}`} to="/categories">
               Categories
             </Link>
-           
+
           </div>
           </div>
           <FaUserCircle className="navBar_icon"/>
