@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BooksPage from './components/BooksPage/index';
 import './index.css'
-// import CalculatorPage from './pages/CalculatorPage';
-// import QuotePage from './pages/QuotePage';
-// import NotMatch from './pages/NotMatch';
+import "antd/dist/antd.css";
 import Navbar from './components/Navbar/index';
 
 ReactDOM.render(

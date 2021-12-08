@@ -1,6 +1,6 @@
 import { useState } from "react";
 import OneBook from "./OneBook";
-import { Progress } from "antd";
+import NewBook from "../NewBook";
 import './booksPage.css'
 
 const BooksPage = () => {
@@ -37,6 +37,11 @@ const BooksPage = () => {
             <OneBook oneBook={book} key={book.id} />
         )
     })}
+
+    <NewBook />
+
+
+
 
       </div>
       
