@@ -12,14 +12,14 @@ import store from './redux/configureStore';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <Router basename={process.env.PUBLIC_URL}>
-    <Navbar/>
-      <Switch>
-        <Route exact path="/" component={BooksPage} />
-        <Route path="/categories" component={CategoriesPage} />
+      <Router basename={process.env.PUBLIC_URL}>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={BooksPage} />
+          <Route path="/categories" component={CategoriesPage} />
 
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

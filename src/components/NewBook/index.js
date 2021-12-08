@@ -47,21 +47,21 @@ const NewBook = () => {
   };
 
   return (
-      <div className="newBookContainer">
-                <div className="newBookInnerContainer">
+    <div className="newBookContainer">
+      <div className="newBookInnerContainer">
 
-      <Input placeholder="New Book Name" onChange={newBookNameHandler} value={newBook.title} className="newBookName"/>
-      <Input placeholder="Author" onChange={authorHanlder} value={newBook.author} className="newBookAuthor"/>
-      <Select defaultValue="Genre" style={{ width: 120 }} value={newBook.genre} onChange={genreHandler} className="newBookCategory">
-      <Option value="Genre" disabled>Genre</Option>
-      <Option value="Economy">Economy</Option>
-      <Option value="Action">Action</Option>
-      <Option value="Science Fiction">Science Fiction</Option>
-      </Select>
-      <button className="submitButton" onClick={submitNewBook}><span>ADD BOOK</span></button>
+        <Input placeholder="New Book Name" onChange={newBookNameHandler} value={newBook.title} className="newBookName" />
+        <Input placeholder="Author" onChange={authorHanlder} value={newBook.author} className="newBookAuthor" />
+        <Select defaultValue="Genre" style={{ width: 120 }} value={newBook.genre} onChange={genreHandler} className="newBookCategory">
+          <Option value="Genre" disabled>Genre</Option>
+          <Option value="Economy">Economy</Option>
+          <Option value="Action">Action</Option>
+          <Option value="Science Fiction">Science Fiction</Option>
+        </Select>
+        <button className="submitButton" type="button" onClick={submitNewBook}><span>ADD BOOK</span></button>
 
-                </div>
       </div>
+    </div>
   );
 };
 

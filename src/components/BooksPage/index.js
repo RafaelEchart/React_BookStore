@@ -9,20 +9,20 @@ const BooksPage = () => {
   const bookList = useSelector((state) => state.booksReducer);
 
   return (
-      <>
+    <>
       <div className="booksPageContainer">
 
-    {bookList.length
-      ? bookList.map((book) => (
+        {bookList.length
+          ? bookList.map((book) => (
             <OneBook oneBook={book} key={book.id} />
-      ))
-      : <NoBooksMessage />}
+          ))
+          : <NoBooksMessage />}
 
-    <NewBook />
+        <NewBook />
 
       </div>
 
-      </>
+    </>
 
   );
 };
