@@ -74,17 +74,17 @@ const Navbar = () => {
 
       <div className="mobileMenuCover" id="mobileMenuCover">
         <div className="firstContainer">
-          <span id="closeButton" className="closeButton" role="button" tabIndex="0" onClick={closeMobileMenu} onKeyDown={openMobileMenu}>X</span>
+          <span id="closeButton" className="closeButton" role="button" tabIndex="0" onClick={closeMobileMenu} onKeyDown={closeMobileMenu}>X</span>
         </div>
         <div className="mobileMenu">
           <ul>
             <li className="mobileMenuItems">
-              <Link to="/" className="mobileMenuItems-a">
+              <Link to="/" className="mobileMenuItems-a" onClick={closeMobileMenu}>
                 Books
               </Link>
             </li>
             <li className="mobileMenuItems">
-              <Link to="/categories" className="mobileMenuItems-a">
+              <Link to="/categories" className="mobileMenuItems-a" onClick={closeMobileMenu}>
                 Categories
               </Link>
             </li>
