@@ -9,15 +9,11 @@ import './newBook.css';
 
 const NewBook = () => {
   const dispatch = useDispatch();
-  const [newBook, setNeBook] = useState({ title: '', author: '', genre: 'Genre' });
+  const [newBook, setNeBook] = useState({ title: '', genre: 'Genre' });
   const { Option } = Select;
 
   const newBookNameHandler = (e) => {
     setNeBook({ ...newBook, title: e.target.value });
-  };
-
-  const authorHanlder = (e) => {
-    setNeBook({ ...newBook, author: e.target.value });
   };
 
   const genreHandler = (e) => {
@@ -25,22 +21,18 @@ const NewBook = () => {
   };
 
   const submitNewBook = () => {
-    const { title, author, genre } = newBook;
+    const { title, genre } = newBook;
 
-    if (title.length && author.length && (genre.length && (genre !== 'Genre'))) {
-      const randomPercent = (Math.random() * 100).toFixed(0);
+    if (title.length && (genre.length && (genre !== 'Genre'))) {
       const newBook = {
-        id: uuid(),
+        item_id: uuid(),
         title,
-        author,
-        genre,
-        percent: randomPercent,
-
+        category: genre,
       };
 
       dispatch(addBook(newBook));
-      message.success(`New book added: ${title} `);
-      setNeBook({ author: '', title: '', genre: 'Genre' });
+      message.success(`New book added: ${title}`);
+      setNeBook({ title: '', genre: 'Genre' });
     } else {
       message.warning('Try again: Check inputs');
     }
@@ -51,7 +43,6 @@ const NewBook = () => {
       <div className="newBookInnerContainer">
 
         <Input placeholder="New Book Name" onChange={newBookNameHandler} value={newBook.title} className="newBookName" />
-        <Input placeholder="Author" onChange={authorHanlder} value={newBook.author} className="newBookAuthor" />
         <Select defaultValue="Genre" style={{ width: 120 }} value={newBook.genre} onChange={genreHandler} className="newBookCategory">
           <Option value="Genre" disabled>Genre</Option>
           <Option value="Economy">Economy</Option>
