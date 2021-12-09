@@ -4,6 +4,9 @@
   display: flex;
   justify-content: center;
   margin: 10px 25px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 .newBookInnerContainer {
@@ -13,6 +16,21 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.newBookTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 90%;
+}
+
+.newBookTitleContainer h3 {
+  color: gray;
+  border-top: 1px solid lightgray;
+  padding-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .submitButton {
