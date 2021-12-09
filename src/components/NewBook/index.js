@@ -42,7 +42,7 @@ const NewBook = () => {
     <div className="newBookContainer">
       <div className="newBookInnerContainer">
 
-        <Input placeholder="New Book Name" onChange={newBookNameHandler} value={newBook.title} className="newBookName" />
+        <Input placeholder="New Book Name" maxLength={40} onChange={newBookNameHandler} value={newBook.title} className="newBookName" />
         <Select defaultValue="Genre" style={{ width: 120 }} value={newBook.genre} onChange={genreHandler} className="newBookCategory">
           <Option value="Genre" disabled>Genre</Option>
           <Option value="Economy">Economy</Option>
