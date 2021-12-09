@@ -2,6 +2,7 @@ import { deleteBook, getBooks, newBook } from './booksAPI';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const LOAD_BOOK = 'bookStore/books/LOAD_BOOK';
 
 const initialState = [];
 
@@ -15,6 +16,11 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+export const loadBook = (payload) => ({
+  type: LOAD_BOOK,
+  payload,
+});
+
 export const loadBooks = () => (dispatch) => {
   getBooks().then((books) => {
     Object.keys(books).forEach((ID) => {
@@ -22,7 +28,7 @@ export const loadBooks = () => (dispatch) => {
       booksTemp.id = ID;
       booksTemp.title = books[ID][0].title;
       booksTemp.category = books[ID][0].category;
-      dispatch(addBook(booksTemp));
+      dispatch(loadBook(booksTemp));
     });
   });
 };
@@ -37,6 +43,9 @@ const reducer = (state = initialState, action) => {
 
       deleteBook(action.payload);
       return state.filter((book) => book.id !== action.payload);
+
+    case LOAD_BOOK:
+      return [...state, action.payload];
 
     default:
       return state;

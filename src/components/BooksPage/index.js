@@ -19,7 +19,7 @@ const BooksPage = () => {
       <div className="booksPageContainer">
 
         {bookList.length
-          ? bookList.map((book) => (<OneBook oneBook={book} key={book.id} />))
+          ? bookList.map((book) => (<OneBook oneBook={book} key={book.id || book.item_id} />))
           : <NoBooksMessage />}
 
         <NewBook />
