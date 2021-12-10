@@ -6,6 +6,8 @@
 
 ## Live Link
 
+[Live demo](https://rafaelechart.github.io/React-BookStore/build)
+
 ## Desktop and Mobile view
 
 > The project is fully avaiable for all devices with pixel perfect definition. 
