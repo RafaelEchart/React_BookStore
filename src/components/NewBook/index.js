@@ -9,7 +9,7 @@ import './newBook.css';
 
 const NewBook = () => {
   const dispatch = useDispatch();
-  const [newBook, setNeBook] = useState({ title: '', genre: 'Genre' });
+  const [newBook, setNeBook] = useState({ title: '', category: 'Category' });
   const { Option } = Select;
 
   const newBookNameHandler = (e) => {
@@ -17,22 +17,22 @@ const NewBook = () => {
   };
 
   const genreHandler = (e) => {
-    setNeBook({ ...newBook, genre: e });
+    setNeBook({ ...newBook, category: e });
   };
 
   const submitNewBook = () => {
-    const { title, genre } = newBook;
+    const { title, category } = newBook;
 
-    if (title.length && (genre.length && (genre !== 'Genre'))) {
+    if (title.length && (category.length && (category !== 'Category'))) {
       const newBook = {
         item_id: uuid(),
         title,
-        category: genre,
+        category,
       };
 
       dispatch(addBook(newBook));
       message.success(`New book added: ${title}`);
-      setNeBook({ title: '', genre: 'Genre' });
+      setNeBook({ title: '', category: 'Category' });
     } else {
       message.warning('Try again: Check inputs');
     }
@@ -40,11 +40,14 @@ const NewBook = () => {
 
   return (
     <div className="newBookContainer">
+      <div className="newBookTitleContainer">
+        <h3>ADD NEW BOOK</h3>
+      </div>
       <div className="newBookInnerContainer">
 
-        <Input placeholder="New Book Name" onChange={newBookNameHandler} value={newBook.title} className="newBookName" />
-        <Select defaultValue="Genre" style={{ width: 120 }} value={newBook.genre} onChange={genreHandler} className="newBookCategory">
-          <Option value="Genre" disabled>Genre</Option>
+        <Input placeholder="Book title" maxLength={40} onChange={newBookNameHandler} value={newBook.title} className="newBookName" />
+        <Select defaultValue="Category" style={{ width: 120 }} value={newBook.category} onChange={genreHandler} className="newBookCategory">
+          <Option value="Category" disabled>Category</Option>
           <Option value="Economy">Economy</Option>
           <Option value="Action">Action</Option>
           <Option value="Science Fiction">Science Fiction</Option>

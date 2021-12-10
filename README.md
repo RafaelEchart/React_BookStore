@@ -2,8 +2,23 @@
 
 # React.js BookStore
 
-> In this project you will be able to save your favorite books.
+> This BooksStore will help you save and keep track of your favorite books, applying React js and Redux.
 
+## Live Link
+
+[Live demo](https://bookstorereactmicroverse.herokuapp.com/)
+
+## Desktop and Mobile view
+
+> The project is fully avaiable for all devices with pixel perfect definition. 
+
+> Desktop version and success alert.
+
+![screenshot](./src/README/desktopView.gif)
+
+> Mobile version and input warning alert.
+
+![screenshot](./src/README/mobileView.gif)
 
 
 
