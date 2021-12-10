@@ -6,7 +6,7 @@
 
 ## Live Link
 
-[Live demo](https://rafaelechart.github.io/React-BookStore/build)
+[Live demo](https://bookstorereactmicroverse.herokuapp.com/)
 
 ## Desktop and Mobile view
 
