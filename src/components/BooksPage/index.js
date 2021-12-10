@@ -12,8 +12,11 @@ const BooksPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadBooks());
+    if (document.readyState !== 'complete') {
+      dispatch(loadBooks());
+    }
   }, []);
+
   return (
     <>
       <div className="booksPageContainer">
