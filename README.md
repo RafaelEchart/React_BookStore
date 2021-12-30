@@ -44,8 +44,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- git clone https://github.com/RafaelEchart/React-BookStore.git
-- cd React-BookStore
+- git clone https://github.com/RafaelEchart/React_BookStore.git
+- cd React_BookStore
 
 ### Install
 
